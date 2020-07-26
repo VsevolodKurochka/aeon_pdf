@@ -1,0 +1,65 @@
+.main-area {
+  display: block;
+  position: relative;
+  width: 1000px;
+  background-color: #fff;
+  box-shadow: 0px 0px 25px 0px #747b74;
+  margin: 50px auto;
+  padding: 60px 60px 200px;
+  font-size: 11px;
+  min-height: 100%;
+
+  &__favorite {
+    color: $brand;
+    font-weight: $font-weight-bold;
+    margin-bottom: 10px;
+  }
+
+  &__category {
+    font-size: 11px;
+    font-weight: $font-weight-semi;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+  }
+
+  &__price {
+    font-size: 19px;
+    font-weight: $font-weight-bold;
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    font-size: 19px;
+    font-weight: $font-weight-semi;
+    margin-bottom: 10px;
+  }
+
+  &__description {
+    font-size: 9px;
+    p {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__content {
+    margin-bottom: 20px;
+  }
+
+  &__plan-image {
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+  }
+
+  &__group {
+    &-image {
+      display: block;
+      height: 160px;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

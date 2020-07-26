@@ -1,0 +1,105 @@
+/// Shorthand for positioning.
+/// @param {String} $position - Position type (either `absolute`, `fixed` or `relative`)
+/// @param {Length} $top [null] - Top offset
+/// @param {Length} $right [null] - Right offset
+/// @param {Length} $bottom [null] - Bottom offset
+/// @param {Length} $left [null] - Left offset
+@mixin pos($position, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+/// Shorthand for absolute positioning.
+/// @param {Arglist} $args - Offsets
+/// @example scss
+/// @include absolute($top: 0, $right: 0, $bottom: 0, $left: 0)
+@mixin pos-a($args...) {
+  @include pos(absolute, $args...);
+}
+
+/// Shorthand for relative positioning.
+/// @param {Arglist} $args - Offsets
+/// @example scss
+/// @include relative($top: 0, $right: 0, $bottom: 0, $left: 0)
+@mixin pos-r($args...) {
+  @include pos(relative, $args...);
+}
+
+/// Shorthand for fixed positioning.
+/// @param {Arglist} $args - Offsets
+/// @example scss
+/// @include relative($top: 0, $right: 0, $bottom: 0, $left: 0)
+@mixin pos-f($args...) {
+  @include pos(fixed, $args...);
+}
+
+////
+/// Size
+/// @type mixin
+/// @param {Length} $width - Element's width
+/// @param {Length} $height [$width] - Element's height
+////
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+/// Transition
+/// @param {String} $property [all] - Property
+/// @param {String} $ease [ease] - Effect
+/// @param {Duration} $duration [0.2s] - Time
+@mixin transition($property: all, $ease: ease, $duration: 0.3s) {
+  transition: $property $duration $ease;
+}
+
+/// Background Image
+/// @param {String} $url - Image background
+/// @param {String} $pos [0, 0] - Image position
+/// @param {String} $repeat [no-repeat] - Image repeat
+/// @param {String} $size [cover] - Image size
+/// @author Vsevolod Kurochka
+@mixin bgi($url, $position: 0 0, $repeat: no-repeat, $size: cover) {
+  background: url("#{$url}") $position $repeat;
+  background-size: $size;
+}
+
+@mixin pad-y($top, $bottom: $top) {
+  padding-top: $top;
+  padding-bottom: $bottom;
+}
+
+@mixin pad-x($left, $right: $left) {
+  padding-left: $left;
+  padding-right: $right;
+}
+
+@mixin margin-y($top, $bottom: $top) {
+  margin-top: $top;
+  margin-bottom: $bottom;
+}
+
+@mixin margin-x($left, $right: $left) {
+  margin-left: $left;
+  margin-right: $right;
+}
+
+@mixin placeholder() {
+  &::placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}

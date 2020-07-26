@@ -1,0 +1,28 @@
+.main-area__footer {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 90px;
+  width: 100%;
+  padding-left: 60px;
+
+  &-title {
+    font-weight: $font-weight-semi;
+    font-size: 9px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  &-list {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-left: 0;
+    list-style: none;
+    font-size: 11px;
+
+    li {
+      margin-right: 15px;
+    }
+  }
+}
