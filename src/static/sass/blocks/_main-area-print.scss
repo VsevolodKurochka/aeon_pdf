@@ -1,0 +1,9 @@
+@media print {
+	.main-area {
+		box-shadow: none;
+		padding: 0;
+	}
+    .main-area__footer {
+      padding-left: 0;
+    }
+}
