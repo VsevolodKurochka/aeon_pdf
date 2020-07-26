@@ -1,0 +1,7 @@
+mixin header(current, total)
+    .main-area__header
+        img(src="static/img/logo.png" class="main-area__header-logo")
+        .main-area__header-count
+            span.main-area__header-count-current!= current
+            span.main-area__header-count-divider /
+            span.main-area__header-count-total!= total
